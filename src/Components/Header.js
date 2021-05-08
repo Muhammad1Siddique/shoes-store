@@ -14,9 +14,9 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-  },
-  h6:{
-      textColor:'white',
+    color:'white',
+    textDecoration: 'none',
+    textAlign: 'center',
   }
 }));
 
@@ -28,10 +28,16 @@ export default function ButtonAppBar() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            <Link to="/">Home</Link> {" "}
-            <Link to="/about">About</Link>{" "}
-            <Link to="/shop">Shop</Link>{" "}
-            <Link to="/contact">Contact</Link>
+            <Link to="/" className={classes.title}>Home</Link>
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            <Link to="/about" className={classes.title}>About</Link>
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            <Link to="/shop" className={classes.title}>Shop</Link>
+          </Typography>
+          <Typography variant="h6" className={classes.title}>
+            <Link to="/contact" className={classes.title}>Contact</Link>
           </Typography>
         </Toolbar>
       </AppBar>
