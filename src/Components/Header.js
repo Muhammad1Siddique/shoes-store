@@ -2,7 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography'
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -11,16 +12,15 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    color:'white',
   },
   title: {
     flexGrow: 1,
-    color:'white',
-    textDecoration: 'none',
-    textAlign: 'center',
-  }
+    marginLeft: '50',
+  },
 }));
 
-export default function ButtonAppBar() {
+export default function Header() {
   const classes = useStyles();
 
   return (
@@ -28,19 +28,23 @@ export default function ButtonAppBar() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            <Link to="/" className={classes.title}>Home</Link>
+            <Link to="/"  style={{color:'white', textDecoration:'none'}}><strong>Nike Shoes</strong></Link>
           </Typography>
-          <Typography variant="h6" className={classes.title}>
-            <Link to="/about" className={classes.title}>About</Link>
-          </Typography>
-          <Typography variant="h6" className={classes.title}>
-            <Link to="/shop" className={classes.title}>Shop</Link>
-          </Typography>
-          <Typography variant="h6" className={classes.title}>
-            <Link to="/contact" className={classes.title}>Contact</Link>
-          </Typography>
+          <Button color="inherit">
+            <Link to="/"  style={{color:'white', textDecoration:'none'}}>Home</Link>
+          </Button>
+          <Button color="inherit">
+          <Link to="/about"  style={{color:'white', textDecoration:'none'}}>About</Link>
+          </Button>
+          <Button color="inherit">
+          <Link to="/shop"   style={{color:'white', textDecoration:'none'}}>Shop</Link>
+          </Button>
+          <Button color="inherit">
+          <Link to="/contact"  style={{color:'white', textDecoration:'none'}}>Contact</Link>
+          </Button>
         </Toolbar>
       </AppBar>
     </div>
   );
 }
+

@@ -5,6 +5,7 @@ import {
   Route
 } from 'react-router-dom';
 import Header from './Components/Header';
+import Footer from './Components/Footer';
 import './App.css';
 import {Home} from './Components/Home';
 import {About} from './Components/About';
@@ -28,7 +29,7 @@ function App() {
         <Route path="/Contact" element={<Contact />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
-        
+      <Footer />
     </Router>
   );
 }
