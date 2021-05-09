@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
       margin:'4%',
     },
     paper: {
-      padding: theme.spacing(2),
       textAlign: 'left',
       color: theme.palette.text.secondary,
       margin: '2%',

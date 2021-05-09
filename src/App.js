@@ -7,7 +7,7 @@ import {
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import './App.css';
-import {Home} from './Components/Home';
+import Home from './Components/Home';
 import {About} from './Components/About';
 import {Shop} from './Components/Shop';
 import {Contact} from './Components/Contact';
